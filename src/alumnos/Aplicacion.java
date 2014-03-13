@@ -5,6 +5,8 @@
 package alumnos;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  *
@@ -18,7 +20,8 @@ public class Aplicacion {
     public static void main(String[] args) {
         Alumno alumnado = new Alumno();
         ArrayList<Alumno> colegio= new ArrayList<Alumno>();
-        alumnado.añadir(colegio);
+        HashMap<String, Alumno> colegio1= new HashMap<>();
+        alumnado.añadir(colegio1);
         alumnado.ver(colegio);
         alumnado.verNota(colegio);
         alumnado.alta(colegio);

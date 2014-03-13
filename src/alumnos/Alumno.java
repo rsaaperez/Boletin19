@@ -6,6 +6,7 @@ package alumnos;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -51,7 +52,7 @@ public class Alumno implements Comparable{
         System.out.println("Fin de la lista.\n");
     }
 
-    public static void añadir(ArrayList<Alumno> colegio) {
+    public static void añadir(HashMap<String, Alumno> colegio1) {
         Scanner sc = new Scanner(System.in);
         int n;
         int check;
@@ -62,7 +63,7 @@ public class Alumno implements Comparable{
             System.out.print("Introduce la nota del alumno: ");
             n = sc.nextInt();
             if (n >= 0 && n <= 10) {
-                colegio.add(new Alumno(nom, n));
+                colegio1.put("Clave: "+nom,new Alumno(nom, n));
             }
             System.out.print("Para finalizar el programa presione 0, otro numero para continuar: ");
             check = sc.nextInt();
